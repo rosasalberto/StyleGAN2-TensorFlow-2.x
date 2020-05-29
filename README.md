@@ -29,4 +29,4 @@ generator = StyleGan2Generator(weights='car', impl, gpu)
 Examples on how to create, load and run the networks can be found in *example_how_to_use* notebook.<br/>
 Examples on how to make a random walk in the latent vector and generate a gif, can be found in *example_latent_changes* notebook.
 
-Training loop has not been implemented yet. Stay tuned.
+Training loop and metrics has not been implemented yet. Stay tuned.
