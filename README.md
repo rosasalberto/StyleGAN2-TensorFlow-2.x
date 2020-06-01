@@ -10,6 +10,8 @@ Official repo using TensorFlow 1.x: https://github.com/NVlabs/stylegan2
 * Support for TensorFlow custom operations
 * Support for CPU usage
 
+The Conv2D op currently does not support grouped convolutions on the CPU. In consequence, when running with CPU, batch size should be 1.
+
 Download network parameters to *weights* folder manually https://drive.google.com/drive/folders/1rhuvN90EGsRhvjQq5gio8VYw7f0LojaK?usp=sharing, or simpy run *download.py* script located in *weights* folder.
 
 ```
