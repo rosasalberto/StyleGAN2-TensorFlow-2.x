@@ -1,5 +1,4 @@
 import tensorflow as tf
-import numpy as np
 
 from utils.utils_stylegan2 import nf
 from layers.conv_2d_layer import Conv2DLayer
@@ -48,6 +47,6 @@ class BlockLayer(tf.keras.layers.Layer):
         x = tf.math.multiply(tf.nn.leaky_relu(x, 0.2), tf.math.sqrt(2.))
  
         t = self.conv2d_skip(t)
-        x = (x + t) * (1 / np.sqrt(2))
+        x = (x + t) * (1 / tf.math.sqrt(2.))
         
         return x
