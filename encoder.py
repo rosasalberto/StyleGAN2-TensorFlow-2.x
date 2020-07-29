@@ -21,8 +21,7 @@ from tensorflow.keras.models import Model
 from tensorflow.keras.losses import mean_squared_error,logcosh
 from tensorflow.keras.optimizers import Adam
 
-from PIL import Image
-from matplotlib.pyplot import imshow
+
 from tqdm import tqdm
 from time import time
 
