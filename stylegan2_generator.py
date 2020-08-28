@@ -12,7 +12,7 @@ class MappingNetwork(tf.keras.layers.Layer):
     """
     StyleGan2 generator mapping network, from z to dlatents for tensorflow 2.x
     """
-    def __init__(self, resolution=1024, impl='cuda', gpu=True, **kwargs):
+    def __init__(self, resolution=1024, **kwargs):
         
         super(MappingNetwork, self).__init__(**kwargs)
         
@@ -140,8 +140,7 @@ class StyleGan2Generator(tf.keras.layers.Layer):
         self.resolution = resolution
         if weights is not None: self.__adjust_resolution(weights)
 
-        self.mapping_network = MappingNetwork(resolution=self.resolution, impl=impl, 
-                                                  gpu=gpu,name='Mapping_network')
+        self.mapping_network = MappingNetwork(resolution=self.resolution,name='Mapping_network')
         self.synthesis_network = SynthesisNetwork(resolution=self.resolution, impl=impl, 
                                                   gpu=gpu, name='Synthesis_network')
         
